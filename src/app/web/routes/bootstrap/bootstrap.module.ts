@@ -9,6 +9,7 @@ import { BootstrapLoginModule } from './routes/bootstrap-login/bootstrap-login.m
 import { BootstrapJoinModule } from './routes/bootstrap-join/bootstrap-join.module';
 import { BootstrapGuestBookModule } from './routes/bootstrap-guest-book/bootstrap-guest-book.module';
 import { BootstrapBoardModule } from './routes/bootstrap-board/bootstrap-board.module';
+import { BootstrapComponent } from './bootstrap.component';
 
 @NgModule({
   imports: [
@@ -16,14 +17,15 @@ import { BootstrapBoardModule } from './routes/bootstrap-board/bootstrap-board.m
     BootstrapRoutingModule,
     BootstrapLoginModule,
     BootstrapJoinModule,
-    BootstrapBoardModule
+    BootstrapBoardModule,
     BootstrapPhotoModule,
     BootstrapGuestBookModule
   ],
   declarations: [
+    BootstrapComponent
     BootstrapHeaderComponent,
     BootstrapAlertComponent,
-    BootstrapFooterComponent
+    BootstrapFooterComponent,
   ]
 })
 export class BootstrapModule {
