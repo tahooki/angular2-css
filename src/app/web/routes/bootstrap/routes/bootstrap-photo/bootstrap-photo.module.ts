@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BootstrapPhotoRoutingModule } from './bootstrap-photo-routing.module';
+import { BootstrapPhotoComponent } from './bootstrap-photo.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    BootstrapPhotoRoutingModule
   ],
-  declarations: []
+  declarations: [
+    BootstrapPhotoComponent
+  ]
 })
 export class BootstrapPhotoModule { }

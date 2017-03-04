@@ -3,16 +3,28 @@ import { CommonModule } from '@angular/common';
 import { BootstrapHeaderComponent } from './layout/bootstrap-header/bootstrap-header.component';
 import { BootstrapAlertComponent } from './layout/bootstrap-alert/bootstrap-alert.component';
 import { BootstrapFooterComponent } from './layout/bootstrap-footer/bootstrap-footer.component';
-import { BootstrapGuestBookComponent } from './routes/bootstrap-guest-book/bootstrap-guest-book.component';
-import { BootstrapBoardComponent } from './routes/bootstrap-board/bootstrap-board.component';
-import { BootstrapPhotoComponent } from './routes/bootstrap-photo/bootstrap-photo.component';
-import { BootstrapLoginComponent } from './routes/bootstrap-login/bootstrap-login.component';
-import { BootstrapJoinComponent } from './routes/bootstrap-join/bootstrap-join.component';
+import { BootstrapRoutingModule } from './bootstrap-routing.module';
+import { BootstrapPhotoModule } from './routes/bootstrap-photo/bootstrap-photo.module';
+import { BootstrapLoginModule } from './routes/bootstrap-login/bootstrap-login.module';
+import { BootstrapJoinModule } from './routes/bootstrap-join/bootstrap-join.module';
+import { BootstrapGuestBookModule } from './routes/bootstrap-guest-book/bootstrap-guest-book.module';
+import { BootstrapBoardModule } from './routes/bootstrap-board/bootstrap-board.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    BootstrapRoutingModule,
+    BootstrapLoginModule,
+    BootstrapJoinModule,
+    BootstrapBoardModule
+    BootstrapPhotoModule,
+    BootstrapGuestBookModule
   ],
-  declarations: [BootstrapHeaderComponent, BootstrapAlertComponent, BootstrapFooterComponent, BootstrapGuestBookComponent, BootstrapBoardComponent, BootstrapPhotoComponent, BootstrapLoginComponent, BootstrapJoinComponent]
+  declarations: [
+    BootstrapHeaderComponent,
+    BootstrapAlertComponent,
+    BootstrapFooterComponent
+  ]
 })
-export class BootstrapModule { }
+export class BootstrapModule {
+}

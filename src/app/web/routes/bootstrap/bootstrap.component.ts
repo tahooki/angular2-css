@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-bootstrap',
+  selector: 'BOOTSTRAP',
   templateUrl: './bootstrap.component.html',
   styleUrls: ['./bootstrap.component.scss']
 })

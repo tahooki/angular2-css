@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-index',
+  selector: 'INDEX',
   templateUrl: 'index.component.html',
   styleUrls: ['index.component.scss']
 })
