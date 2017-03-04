@@ -22,10 +22,10 @@ import { BootstrapComponent } from './bootstrap.component';
     BootstrapGuestBookModule
   ],
   declarations: [
-    BootstrapComponent
+    BootstrapComponent,
     BootstrapHeaderComponent,
     BootstrapAlertComponent,
-    BootstrapFooterComponent,
+    BootstrapFooterComponent
   ]
 })
 export class BootstrapModule {
