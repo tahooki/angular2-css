@@ -2,5 +2,9 @@
   bootstrap works!
 </p>
 <div class="container">
-  abcd
+  모!
 </div>
+<a [routerLink]="[{ outlets: { bootstrapOutlet: ['login'] } }]">login</a>
+<div (click)="onClickLink()">asdasdasdasd</div>
+
+<router-outlet name="bootstrapOutlet"></router-outlet>

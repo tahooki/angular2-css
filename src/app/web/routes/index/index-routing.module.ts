@@ -15,4 +15,4 @@ import { IndexComponent } from './index.component';
     RouterModule
   ]
 })
-export class WebRoutingModule {}
+export class IndexRoutingModule {}

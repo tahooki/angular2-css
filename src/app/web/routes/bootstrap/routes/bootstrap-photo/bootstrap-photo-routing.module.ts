@@ -7,7 +7,8 @@ import { BootstrapPhotoComponent } from './bootstrap-photo.component';
     RouterModule.forChild([
       {
         path: 'bootstrap/photo',
-        component: BootstrapPhotoComponent
+        component: BootstrapPhotoComponent,
+        outlet: 'bootstrap'
       }
     ])
   ],

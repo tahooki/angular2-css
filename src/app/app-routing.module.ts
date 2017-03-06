@@ -1,5 +1,6 @@
 import { NgModule }     from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { BootstrapComponent } from './web/routes/bootstrap/bootstrap.component';
 
 @NgModule({
   imports: [
@@ -8,6 +9,11 @@ import { RouterModule } from '@angular/router';
         path: '',
         redirectTo: '',
         pathMatch: 'full'
+      },
+      {
+        path: 'bootstrap',
+        component: BootstrapComponent,
+        outlet: ''
       }
     ])
   ],
@@ -15,4 +21,6 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+
+}

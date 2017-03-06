@@ -1,13 +1,21 @@
 import { NgModule }     from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BootstrapComponent } from './bootstrap.component';
+import { BootstrapLoginComponent } from './routes/bootstrap-login/bootstrap-login.component';
 
 @NgModule({
   imports: [
     RouterModule.forChild([
       {
         path: 'bootstrap',
-        component: BootstrapComponent
+        component: BootstrapComponent,
+        children: [
+          {
+            path: 'login',
+            component: BootstrapLoginComponent,
+            outlet: 'bootstrapOutlet'
+          }
+        ]
       }
     ])
   ],
@@ -15,4 +23,6 @@ import { BootstrapComponent } from './bootstrap.component';
     RouterModule
   ]
 })
-export class BootstrapRoutingModule {}
+export class BootstrapRoutingModule {
+
+}

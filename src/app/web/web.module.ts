@@ -1,17 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { IndexComponent } from './index.component';
-import { WebRoutingModule } from './web-routing.module';
 import { BootstrapModule } from './routes/bootstrap/bootstrap.module';
+import { IndexModule } from './routes/index/index.module';
 
 @NgModule({
   imports: [
-    CommonModule,
-    WebRoutingModule,
+    IndexModule,
     BootstrapModule
-  ],
-  declarations: [
-    IndexComponent,
   ]
 })
 export class WebModule {

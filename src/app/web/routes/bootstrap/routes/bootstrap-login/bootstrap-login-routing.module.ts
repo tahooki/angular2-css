@@ -6,8 +6,9 @@ import { BootstrapLoginComponent } from './bootstrap-login.component';
   imports: [
     RouterModule.forChild([
       {
-        path: 'bootstrap/login',
-        component: BootstrapLoginComponent
+        path: 'login',
+        component: BootstrapLoginComponent,
+        outlet: 'a'
       }
     ])
   ],
