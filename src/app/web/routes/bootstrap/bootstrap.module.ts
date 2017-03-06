@@ -10,12 +10,12 @@ import { BootstrapJoinModule } from './routes/bootstrap-join/bootstrap-join.modu
 import { BootstrapGuestBookModule } from './routes/bootstrap-guest-book/bootstrap-guest-book.module';
 import { BootstrapBoardModule } from './routes/bootstrap-board/bootstrap-board.module';
 import { BootstrapComponent } from './bootstrap.component';
-import { BootstrapLoginComponent } from './routes/bootstrap-login/bootstrap-login.component';
 
 @NgModule({
   imports: [
     CommonModule,
     BootstrapRoutingModule,
+    BootstrapLoginModule,
     BootstrapJoinModule,
     BootstrapBoardModule,
     BootstrapPhotoModule,
@@ -23,7 +23,6 @@ import { BootstrapLoginComponent } from './routes/bootstrap-login/bootstrap-logi
   ],
   declarations: [
     BootstrapComponent,
-    BootstrapLoginComponent,
     BootstrapHeaderComponent,
     BootstrapAlertComponent,
     BootstrapFooterComponent
