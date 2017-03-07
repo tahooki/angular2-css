@@ -10,6 +10,8 @@ import { BootstrapJoinModule } from './routes/bootstrap-join/bootstrap-join.modu
 import { BootstrapGuestBookModule } from './routes/bootstrap-guest-book/bootstrap-guest-book.module';
 import { BootstrapBoardModule } from './routes/bootstrap-board/bootstrap-board.module';
 import { BootstrapComponent } from './bootstrap.component';
+import { BootstrapTestComponent } from './routes/bootstrap-test/bootstrap-test.component';
+import { BootstrapTestModule } from './routes/bootstrap-test/bootstrap-test.module';
 
 @NgModule({
   imports: [
@@ -19,7 +21,8 @@ import { BootstrapComponent } from './bootstrap.component';
     BootstrapJoinModule,
     BootstrapBoardModule,
     BootstrapPhotoModule,
-    BootstrapGuestBookModule
+    BootstrapGuestBookModule,
+    BootstrapTestModule
   ],
   declarations: [
     BootstrapComponent,
