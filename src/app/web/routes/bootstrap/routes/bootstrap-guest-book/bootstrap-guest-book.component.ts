@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-bootstrap-guest-book',
+  selector: 'BOOTSTRAP-GUESTBOOK',
   templateUrl: './bootstrap-guest-book.component.html',
   styleUrls: ['./bootstrap-guest-book.component.scss']
 })

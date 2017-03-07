@@ -11,7 +11,7 @@ import { BootstrapComponent } from '../../bootstrap.component';
         component: BootstrapComponent,
         children:  [
           {
-            path:      'guest',
+            path:      'guestbook',
             component: BootstrapGuestBookComponent,
             outlet:    'bootstrapOutlet'
           }

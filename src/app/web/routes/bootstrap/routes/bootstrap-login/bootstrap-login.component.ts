@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-bootstrap-login',
+  selector: 'BOOTSTRAP-LOGIN',
   templateUrl: './bootstrap-login.component.html',
   styleUrls: ['./bootstrap-login.component.scss']
 })

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-bootstrap-join',
+  selector: 'BOOTSTRAP-JOIN',
   templateUrl: './bootstrap-join.component.html',
   styleUrls: ['./bootstrap-join.component.scss']
 })

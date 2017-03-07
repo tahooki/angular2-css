@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-bootstrap-photo',
+  selector: 'BOOTSTRAP-PHOTO',
   templateUrl: './bootstrap-photo.component.html',
   styleUrls: ['./bootstrap-photo.component.scss']
 })
