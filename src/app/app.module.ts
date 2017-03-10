@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { WebModule } from './web/web.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './web/layout/header/header.component';
+import { KitModule } from './kit/kit.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HeaderComponent } from './web/layout/header/header.component';
     FormsModule,
     HttpModule,
     WebModule,
+    KitModule,
     AppRoutingModule
   ],
   providers: [],
