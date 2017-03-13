@@ -10,6 +10,10 @@ import { SlideItemComponent } from './slide-item/slide-item.component';
   declarations: [
     SlidesComponent,
     SlideItemComponent
+  ],
+  exports: [
+    SlidesComponent,
+    SlideItemComponent
   ]
 })
 export class SlidesModule { }
