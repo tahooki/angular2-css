@@ -1,4 +1,4 @@
-# Angular2-Css
+# Tahooki-Angular2-Factory
 
 이 프로젝트는 CSS 라이브러리를 테스트 하기위해서 만든 프로젝트입니다.
 
