@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BootstrapModule } from './routes/bootstrap/bootstrap.module';
 import { IndexModule } from './routes/index/index.module';
-import { StudyComponent } from './routes/study/study.component';
 import { StudyModule } from './routes/study/study.module';
+import { AlertComponent } from './layout/alert/alert.component';
 
 @NgModule({
   imports: [
@@ -10,7 +10,9 @@ import { StudyModule } from './routes/study/study.module';
     BootstrapModule,
     StudyModule
   ],
-  declarations: [StudyComponent],
+  declarations: [
+    AlertComponent
+  ],
   exports: []
 })
 export class WebModule {
