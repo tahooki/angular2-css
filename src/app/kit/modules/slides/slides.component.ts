@@ -4,7 +4,7 @@ import { ContentChildren, ViewChild } from '@angular/core/src/metadata/di';
 import { HostListener } from '@angular/core/src/metadata/directives';
 
 @Component({
-  selector:    'kit-slides',
+  selector:    'thk-slides',
   templateUrl: 'slides.component.html',
   styleUrls:   ['slides.component.scss']
 })
@@ -20,10 +20,40 @@ export class SlidesComponent implements OnInit {
   @ViewChild('rightButton')
   rightButtonElement: ElementRef;
 
-  @HostListener('click') onClick() {
-    console.log('onClick !!');
+  isMouseDown = false;
+
+  @HostListener('touchstart',['$event']) onTouchstart(e: any) {
+    console.log('onTouchstart !! ', e);
   };
 
+  @HostListener('touchmove',['$event']) onTouchmove(e: any) {
+    console.log('onTouchmove !! ', e);
+  };
+
+  @HostListener('touchend',['$event']) onTouchend(e: any) {
+    console.log('onTouchend !! ', e);
+  };
+
+  @HostListener('mousedown',['$event']) onMousedown(e: any) {
+    console.log('onMousedown !! ', e);
+    this.isMouseDown = true;
+  };
+
+  @HostListener('mousemove',['$event']) onMousemove(e: any) {
+    if(this.isMouseDown) {
+      console.log('onMousemove !! ', e);
+    }
+  };
+
+  @HostListener('mouseup',['$event']) onMouseup(e: any) {
+    console.log('onMouseup !! ', e);
+    this.isMouseDown = false;
+  };
+
+  @HostListener('window:resize', ['$event']) onResize(e:any) {
+    console.log('onResize !! ', e.target.innerWidth);
+
+  };
 
   constructor() { }
 

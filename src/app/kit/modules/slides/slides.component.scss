@@ -1,3 +1,10 @@
-.slides-container {
+:host {
+  overflow-x: hidden;
+  position: absolute;
   width: 100%;
+}
+
+.slides-container {
+  position: relative;
+  width: 920px;
 }
