@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { WebModule } from './web/web.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './web/layout/header/header.component';
+import { AlertModule } from './biz/service/alert/alert.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HeaderComponent } from './web/layout/header/header.component';
     FormsModule,
     HttpModule,
     WebModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AlertModule
   ],
   providers: [],
   bootstrap: [AppComponent]
