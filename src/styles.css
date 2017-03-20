@@ -22,3 +22,8 @@ body,input,textarea,select,button,table{font-family:'Nanum Gothic',Dotum,AppleGo
 img,fieldset{border:0}
 ul,ol{list-style:none}
 em,address{font-style:normal} a{text-decoration:none} a:hover,a:active,a:focus{text-decoration:underline}
+
+
+@media(min-width:720px) {
+
+}
