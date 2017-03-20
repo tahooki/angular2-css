@@ -8,6 +8,7 @@ import { WebModule } from './web/web.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './web/layout/header/header.component';
 import { AlertModule } from './biz/service/alert/alert.module';
+import { FirebaseApiModule } from './biz/service/api/firebase/firebase-api.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AlertModule } from './biz/service/alert/alert.module';
     HttpModule,
     WebModule,
     AppRoutingModule,
-    AlertModule
+    AlertModule,
+    FirebaseApiModule
   ],
   providers: [],
   bootstrap: [AppComponent]
