@@ -6,6 +6,7 @@ import { AlertComponent } from './layout/alert/alert.component';
 import { FirebaseModule } from './routes/firebase/firebase.module';
 import { TestModule } from './routes/test/test.module';
 import { CopycatModule } from './routes/copycat/copycat.module';
+import { DragulaModule } from './routes/dragula/dragula.module';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { CopycatModule } from './routes/copycat/copycat.module';
     StudyModule,
     TestModule,
     FirebaseModule,
-    CopycatModule
+    CopycatModule,
+    DragulaModule
   ],
   declarations: [
     AlertComponent
