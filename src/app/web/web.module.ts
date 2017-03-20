@@ -4,8 +4,8 @@ import { IndexModule } from './routes/index/index.module';
 import { StudyModule } from './routes/study/study.module';
 import { AlertComponent } from './layout/alert/alert.component';
 import { FirebaseModule } from './routes/firebase/firebase.module';
-import { TestComponent } from './routes/test/test.component';
 import { TestModule } from './routes/test/test.module';
+import { CopycatModule } from './routes/copycat/copycat.module';
 
 @NgModule({
   imports: [
@@ -13,11 +13,11 @@ import { TestModule } from './routes/test/test.module';
     BootstrapModule,
     StudyModule,
     TestModule,
-    FirebaseModule
+    FirebaseModule,
+    CopycatModule
   ],
   declarations: [
-    AlertComponent,
-    TestComponent
+    AlertComponent
   ],
   exports: []
 })
