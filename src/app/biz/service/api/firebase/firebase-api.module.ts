@@ -1,5 +1,4 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FirebaseApiService } from './firebase-api.service';
 import { AngularFireModule } from 'angularfire2';
 
@@ -14,11 +13,19 @@ export const firebaseConfig = {
 
 @NgModule({
   imports: [
-    CommonModule,
     AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [
     FirebaseApiService
   ]
 })
-export class FirebaseApiModule { }
+export class FirebaseApiModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: FirebaseApiModule,
+      providers: [
+        FirebaseApiService
+      ]
+    }
+  }
+}

@@ -1,22 +1,20 @@
 import { NgModule } from '@angular/core';
-import { BootstrapModule } from './routes/bootstrap/bootstrap.module';
-import { IndexModule } from './routes/index/index.module';
-import { StudyModule } from './routes/study/study.module';
+import { BootstrapRouteModule } from './routes/bootstrap/bootstrap-route.module';
+import { IndexRouteModule } from './routes/index/index-route.module';
 import { AlertComponent } from './layout/alert/alert.component';
-import { FirebaseModule } from './routes/firebase/firebase.module';
-import { TestModule } from './routes/test/test.module';
-import { CopycatModule } from './routes/copycat/copycat.module';
-import { DragulaModule } from './routes/dragula/dragula.module';
+import { FirebaseRouteModule } from './routes/firebase/firebase-route.module';
+import { TestRouteModule } from './routes/test/test-route.module';
+import { CopycatRouteModule } from './routes/copycat/copycat-route.module';
+import { DragulaRouteModule } from './routes/dragula/dragula-route.module';
 
 @NgModule({
   imports: [
-    IndexModule,
-    BootstrapModule,
-    StudyModule,
-    TestModule,
-    FirebaseModule,
-    CopycatModule,
-    DragulaModule
+    IndexRouteModule,
+    BootstrapRouteModule,
+    TestRouteModule,
+    FirebaseRouteModule,
+    CopycatRouteModule,
+    DragulaRouteModule
   ],
   declarations: [
     AlertComponent
@@ -29,7 +27,7 @@ export class WebModule {
  RouterModule.forChild([
  {
  path: '',
- component: IndexComponent,
+ component: IndexRouteComponent,
  redirectTo: '/bootstrap',
  pathMatch: 'full'
  }

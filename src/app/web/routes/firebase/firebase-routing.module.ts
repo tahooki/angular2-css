@@ -1,13 +1,13 @@
 import { NgModule }     from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { FirebaseComponent } from './firebase.component';
+import { FirebaseRouteComponent } from './firebase-route.component';
 
 @NgModule({
   imports: [
     RouterModule.forChild([
       {
-        path: 'firebase',
-        component: FirebaseComponent
+        path:      'firebase',
+        component: FirebaseRouteComponent
       }
     ])
   ],

@@ -1,13 +1,13 @@
 import { NgModule }     from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CopycatComponent } from './copycat.component';
+import { CopycatRouteComponent } from './copycat-route.component';
 
 @NgModule({
   imports: [
     RouterModule.forChild([
       {
-        path: 'copycat',
-        component: CopycatComponent
+        path:      'copycat',
+        component: CopycatRouteComponent
       }
     ])
   ],
@@ -15,4 +15,6 @@ import { CopycatComponent } from './copycat.component';
     RouterModule
   ]
 })
-export class CopycatRoutingModule {}
+export class CopycatRoutingModule {
+
+}
