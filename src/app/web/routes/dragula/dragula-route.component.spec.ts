@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { DragulaComponent } from './dragula.component';
+import { DragulaRouteComponent } from './dragula-route.component';
 
-describe('DragulaComponent', () => {
-  let component: DragulaComponent;
-  let fixture: ComponentFixture<DragulaComponent>;
+describe('DragulaRouteComponent', () => {
+  let component: DragulaRouteComponent;
+  let fixture: ComponentFixture<DragulaRouteComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DragulaComponent ]
+      declarations: [ DragulaRouteComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DragulaComponent);
+    fixture = TestBed.createComponent(DragulaRouteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

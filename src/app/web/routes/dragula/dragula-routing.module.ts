@@ -1,13 +1,13 @@
 import { NgModule }     from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { DragulaComponent } from './dragula.component';
+import { DragulaRouteComponent } from './dragula-route.component';
 
 @NgModule({
   imports: [
     RouterModule.forChild([
       {
-        path: 'dragula',
-        component: DragulaComponent
+        path:      'dragula',
+        component: DragulaRouteComponent
       }
     ])
   ],
