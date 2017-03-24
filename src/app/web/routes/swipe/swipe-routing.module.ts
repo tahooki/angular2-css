@@ -1,13 +1,13 @@
 import { NgModule }     from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { TestRouteComponent } from './test-route.component';
+import { SwipeRouteComponent } from './swipe-route.component';
 
 @NgModule({
   imports: [
     RouterModule.forChild([
       {
-        path:      'test',
-        component: TestRouteComponent
+        path:      'swipe',
+        component: SwipeRouteComponent
       }
     ])
   ],
@@ -15,4 +15,4 @@ import { TestRouteComponent } from './test-route.component';
     RouterModule
   ]
 })
-export class TestRoutingModule {}
+export class SwipeRoutingModule {}

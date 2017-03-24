@@ -10,5 +10,6 @@ export class IndexRouteComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 }

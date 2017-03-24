@@ -3,21 +3,21 @@ import { BootstrapRouteModule } from './routes/bootstrap/bootstrap-route.module'
 import { IndexRouteModule } from './routes/index/index-route.module';
 import { AlertComponent } from './layout/alert/alert.component';
 import { FirebaseRouteModule } from './routes/firebase/firebase-route.module';
-import { TestRouteModule } from './routes/test/test-route.module';
 import { CopycatRouteModule } from './routes/copycat/copycat-route.module';
 import { DragulaRouteModule } from './routes/dragula/dragula-route.module';
+import { SwipeRouteModule } from './routes/swipe/swipe-route.module';
 
 @NgModule({
   imports: [
     IndexRouteModule,
     BootstrapRouteModule,
-    TestRouteModule,
     FirebaseRouteModule,
     CopycatRouteModule,
-    DragulaRouteModule
+    DragulaRouteModule,
+    SwipeRouteModule
   ],
   declarations: [
-    AlertComponent
+    AlertComponent,
   ],
   exports: []
 })
