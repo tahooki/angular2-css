@@ -1,0 +1,22 @@
+<p>
+  upload-route works!
+</p>
+<h2>싱글 파일 버튼</h2>
+<input type="file" #input [accept]="['image/*']" (change)="onChangeFile(input.files)">
+
+<h2>멀티 파일 버튼</h2>
+<input type="file" #input2 [accept]="['image/*']" multiple  (change)="onChangeFile(input2.files)">
+
+<h2>파일 드랍</h2>
+<div class="upload-box"
+     thk-file-drop
+     [accept]="['image/*']"
+     (fileDrop)="onFileDrop($event)">
+  file Drop!!
+</div>
+
+<h2>이미지 섬네일</h2>
+<div
+  class="image"
+  [ngStyle]="{'background-image': 'url('+ imageSrc +')'}"
+></div>
