@@ -1,7 +1,5 @@
-import { Component, OnInit, QueryList, ElementRef } from '@angular/core';
+import { Component, OnInit, QueryList, ElementRef, ContentChildren, ViewChild, HostListener } from '@angular/core';
 import { SlideItemComponent } from './slide-item/slide-item.component';
-import { ContentChildren, ViewChild } from '@angular/core/src/metadata/di';
-import { HostListener } from '@angular/core/src/metadata/directives';
 
 @Component({
   selector:    'thk-slides',
