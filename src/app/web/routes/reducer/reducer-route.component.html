@@ -1,0 +1,20 @@
+<p>
+  reducer-route works!
+</p>
+
+<div class="buttonGroup">
+  <div class="loginButton" (click)="onClickLogIn()">
+    로그인 버튼
+  </div>
+  <div class="loginButton" (click)="onClickLogOut()">
+    로그아웃 버튼
+  </div>
+</div>
+
+
+<h2> 리듀서 테스트 </h2>
+<div *ngFor="let user of userInfo">
+  userId : {{user?.id}}<br>
+  userName : {{user?.name}}<br>
+  userEmail : {{user?.email}}
+</div>
