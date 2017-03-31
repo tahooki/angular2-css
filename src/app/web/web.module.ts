@@ -8,7 +8,6 @@ import { DragulaRouteModule } from './routes/dragula/dragula-route.module';
 import { SwipeRouteModule } from './routes/swipe/swipe-route.module';
 import { ReducerRouteModule } from './routes/reducer/reducer-route.module';
 import { UploadRouteModule } from './routes/upload/upload-route.module';
-import { DirectivesModule } from '../kit/directives/directives.module';
 
 @NgModule({
   imports: [

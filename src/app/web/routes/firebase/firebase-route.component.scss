@@ -1,0 +1,27 @@
+.container {
+  position: relative;
+  height: 100px;
+  padding: 20px;
+  .button-group {
+    position: relative;
+    display: flex;
+    height: inherit;
+
+    .button:last-child {
+      margin-right: 0px;
+    }
+    .button {
+      margin-right: 20px;
+      box-shadow: 5px 5px 10px lightgray;
+      cursor: pointer;
+      display: flex;
+      font-weight: bold;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid silver;
+      border-radius: 5px;
+      height: inherit;
+      flex: 1;
+    }
+  }
+}
