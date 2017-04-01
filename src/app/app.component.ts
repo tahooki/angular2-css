@@ -40,6 +40,7 @@ export class AppComponent implements OnInit {
 
     this.appStyle.top  = app_top + 'px';
     this.appStyle.left = app_left + 'px';
+    console.log('_setLayoutCenter', this.appStyle);
   }
 
   private _initLayout() {
