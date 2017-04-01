@@ -15,16 +15,16 @@ export class UploadRouteComponent implements OnInit {
   ngOnInit() {
   }
 
-  onChangeFile(e) {
-    console.log('onfileChange',e);
-    this._setSomenailImage(e[0]);
-
+  onChangeFile(fileList) {
+    console.log('onfileChange',fileList);
+    let firstFile = fileList[0];
+    this._setSomenailImage(firstFile);
   }
 
-  onFileDrop(e) {
-    console.log('onFileDrop',e);
-
-    this._setSomenailImage(e[0]);
+  onFileDrop(fileList) {
+    console.log('onFileDrop',fileList);
+    let firstFile = fileList[0];
+    this._setSomenailImage(firstFile);
   }
 
   private _setSomenailImage(file: any){
