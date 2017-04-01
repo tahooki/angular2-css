@@ -24,6 +24,10 @@ ul,ol{list-style:none}
 em,address{font-style:normal} a{text-decoration:none} a:hover,a:active,a:focus{text-decoration:underline}
 
 
-@media(min-width:720px) {
+body {
+  background: darkgray;
+}
+
+@media(min-width:375px) {
 
 }
