@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector:    'app-root',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls:   ['app.component.scss']
 })
 export class AppComponent implements OnInit {
+  @ViewChild('appBody') appBody: ElementRef;
+  @ViewChild('appContent') appContent: ElementRef;
 
   appStyle: any        = {};
   appContentStyle: any = {};
@@ -38,22 +40,18 @@ export class AppComponent implements OnInit {
     let app_left = isOverWidth ? widthCenter : 0;
     let app_top  = isOverHeight ? heightCenter : 0;
 
-    this.appStyle.top  = app_top + 'px';
-    this.appStyle.left = app_left + 'px';
-    console.log('_setLayoutCenter', this.appStyle);
+    this.appBody.nativeElement.style.top = app_top + 'px';
+    this.appBody.nativeElement.style.left = app_left + 'px';
   }
 
   private _initLayout() {
-    this.appStyle = {
-      width:  this.APP_WIDTH + 'px',
-      height: this.APP_HEIGHT + 'px',
-    }
+    console.log('_initLayout', this.appBody, this.appContent);
+    this.appBody.nativeElement.style.width = this.APP_WIDTH + 'px';
+    this.appBody.nativeElement.style.height = this.APP_HEIGHT + 'px';
 
     let header: any   = document.getElementsByClassName('header')[0];
-    let contentHeight = window.innerWidth - header.innerHeight;
+    let contentHeight = this.APP_HEIGHT - header.clientHeight;
 
-    this.appContentStyle = {
-      height: contentHeight
-    }
+    this.appContent.nativeElement.style.height = contentHeight + 'px';
   }
 }
