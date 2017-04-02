@@ -26,7 +26,6 @@ export class AppComponent implements OnInit {
   }
 
   onResize() {
-    console.log('onResize');
     this._setLayoutCenter();
   }
 
@@ -45,7 +44,6 @@ export class AppComponent implements OnInit {
   }
 
   private _initLayout() {
-    console.log('_initLayout', this.appBody, this.appContent);
     this.appBody.nativeElement.style.width = this.APP_WIDTH + 'px';
     this.appBody.nativeElement.style.height = this.APP_HEIGHT + 'px';
 
