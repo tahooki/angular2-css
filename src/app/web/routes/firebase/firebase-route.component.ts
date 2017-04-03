@@ -3,20 +3,23 @@ import { FirebaseApiService } from '../../../biz/service/api/firebase/firebase-a
 import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 
 @Component({
-  selector: 'app-firebase',
+  selector:    'app-firebase',
   templateUrl: './firebase-route.component.html',
-  styleUrls: ['./firebase-route.component.scss']
+  styleUrls:   ['./firebase-route.component.scss']
 })
 export class FirebaseRouteComponent implements OnInit {
+
+  loginUser: any;
+
+  movieList$: any;
 
   items: FirebaseListObservable<any[]>;
 
   write: FirebaseObjectObservable<any>;
 
-  constructor(
-    // private _firebaseApi: FirebaseApiService
-    private _af: AngularFire,
-  ) { }
+  constructor(// private _firebaseApi: FirebaseApiService
+              private _af: AngularFire,) {
+  }
 
   ngOnInit() {
     this.items = this._af.database.list('/list');
@@ -29,18 +32,46 @@ export class FirebaseRouteComponent implements OnInit {
     //   console.log(snapshot.value)
     // });
 
+
+
     let authConfig: any = {
-      method: 0,
+      method:   0,
       provider: 3
     }
 
-    // this._af.auth.login(authConfig).then(data => {
-    //   console.log(data);
-    // });
+    this._af.auth.subscribe((data) => {
+      if (data) {
+        this.loginUser = data;
+        this.movieList$ = this._af.database.list('/movie-list');
+        console.log(this.movieList$);
+      } else {
+        this.loginUser = null;
+        this._af.auth.login(authConfig).then(data => {
+          console.log(data);
+          this.movieList$ = this._af.database.list('/movie-list');
+          console.log(this.movieList$);
+        });
+      }
+    })
+
+
   }
 
   onClickLoginPopup() {
 
+  }
+
+  onSaveMovieName(movieName) {
+    console.log(movieName);
+    this.movieList$.push({movieName : movieName});
+  }
+
+  updateMovie(key, movieName) {
+    this.movieList$.update(key,{movieName : movieName});
+  }
+
+  deleteMovie(key) {
+    this.movieList$.remove(key);
   }
 }
 

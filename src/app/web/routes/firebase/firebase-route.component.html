@@ -26,3 +26,23 @@
     <div class="button">logout</div>
   </div>
 </div>
+
+<div>
+  <p>
+    create movie date
+  </p>
+  <input type="text" #input1/>
+  <a (click)="onSaveMovieName(input1.value)">
+    save
+  </a>
+</div>
+<div>
+  <p>movie List</p>
+  <ul>
+    <li *ngFor="let movie of movieList$ | async">
+      <input type="text" #input2 [value]="movie.movieName"/>
+      <a (click)="updateMovie(movie.$key, input2.vlaue)">update</a>
+      <a (click)="deleteMovie(movie.$key)">delete</a>
+    </li>
+  </ul>
+</div>
