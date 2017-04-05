@@ -1,10 +1,10 @@
-import { Angular2CssPage } from './app.po';
+import { Test3Page } from './app.po';
 
-describe('angular2-css App', function() {
-  let page: Angular2CssPage;
+describe('test3 App', () => {
+  let page: Test3Page;
 
   beforeEach(() => {
-    page = new Angular2CssPage();
+    page = new Test3Page();
   });
 
   it('should display message saying app works', () => {

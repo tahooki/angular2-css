@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class Angular2CssPage {
+export class Test3Page {
   navigateTo() {
     return browser.get('/');
   }
