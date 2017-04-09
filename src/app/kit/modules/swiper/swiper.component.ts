@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import './lib/js/swiper.min.js';
 declare let Swiper: any;
 
@@ -13,15 +13,21 @@ declare let Swiper: any;
   ]
 })
 export class THKSwiperComponent implements OnInit {
+  @Input()
+  swiperClass: string; // 해당 컴포넌트 사용
+
   swiper: any;
 
   constructor() { }
 
   ngOnInit() {
+
+
     this.swiper = new Swiper('.swiper-container', {
       // Optional parameters
       direction: 'horizontal',
       loop: true,
+
 
       // If we need pagination
       // pagination: '.swiper-pagination',
