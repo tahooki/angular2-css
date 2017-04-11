@@ -53,12 +53,6 @@ export class FirebaseRouteComponent implements OnInit {
         });
       }
     })
-
-
-  }
-
-  onClickLoginPopup() {
-
   }
 
   onSaveMovieName(movieName) {
@@ -122,5 +116,4 @@ export class FirebaseRouteComponent implements OnInit {
  email: string;
  password: string;
  }
-
  */
