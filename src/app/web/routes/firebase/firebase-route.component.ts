@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FirebaseApiService } from '../../../biz/service/api/firebase/firebase-api.service';
 import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 
 @Component({
@@ -17,38 +16,28 @@ export class FirebaseRouteComponent implements OnInit {
 
   write: FirebaseObjectObservable<any>;
 
-  constructor(// private _firebaseApi: FirebaseApiService
-              private _af: AngularFire,) {
+  constructor(private _angularFire: AngularFire) {
   }
 
   ngOnInit() {
-    this.items = this._af.database.list('/list');
-    this.write = this._af.database.object('/list', {preserveSnapshot: true});
-
-    // this.write.set({name : '홍길동'});
-    // this.items.push({name : '홍길동'});
-    // this.write.subscribe(snapshot => {
-    //   console.log(snapshot.key)
-    //   console.log(snapshot.value)
-    // });
-
-
+    this.items = this._angularFire.database.list('/list');
+    this.write = this._angularFire.database.object('/list', {preserveSnapshot: true});
 
     let authConfig: any = {
       method:   0,
       provider: 3
     }
 
-    this._af.auth.subscribe((data) => {
+    this._angularFire.auth.subscribe((data) => {
       if (data) {
         this.loginUser = data;
-        this.movieList$ = this._af.database.list('/movie-list');
+        this.movieList$ = this._angularFire.database.list('/movie-list');
         console.log(this.movieList$);
       } else {
         this.loginUser = null;
-        this._af.auth.login(authConfig).then(data => {
+        this._angularFire.auth.login(authConfig).then(data => {
           console.log(data);
-          this.movieList$ = this._af.database.list('/movie-list');
+          this.movieList$ = this._angularFire.database.list('/movie-list');
           console.log(this.movieList$);
         });
       }
@@ -70,6 +59,12 @@ export class FirebaseRouteComponent implements OnInit {
 }
 
 /*
+ this.write.set({name : '홍길동'});
+ this.items.push({name : '홍길동'});
+ this.write.subscribe(snapshot => {
+ console.log(snapshot.key)
+ console.log(snapshot.value)
+ });
  login(config?: AuthConfiguration): firebase.Promise<FirebaseAuthState>;
  login(credentials?: EmailPasswordCredentials | firebase.auth.AuthCredential | string): firebase.Promise<FirebaseAuthState>;
  login(credentials: EmailPasswordCredentials | firebase.auth.AuthCredential | string, config?: AuthConfiguration): firebase.Promise<FirebaseAuthState>;
